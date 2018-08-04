@@ -1,0 +1,891 @@
+<!DOCTYPE html><html><head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=640, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, target-densityDpi=device-dpi">
+		<title>YZ_Lines Mobile App</title> 
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0-alpha.1/jquery.mobile-1.2.0-alpha.1.min.css" />
+<link rel="stylesheet" href="css/css.css" />
+<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.2.0-alpha.1/jquery.mobile-1.2.0-alpha.1.min.js"></script>
+<script src="http://www.booklife.co.za/makim/imagejs.js"></script>
+<script src="http://www.booklife.co.za/makim/quotesjs.js"></script>
+<script src="js/js.js"></script>
+<script src="http://www.booklife.co.za/makim/categoryquotesjs.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://localhost:58888/_appMobi/appmobi.js"></script>
+</head>
+<body onload='touchScroll("ss");'><script>
+$(function() {
+  setTimeout(hideSplash, 3000);
+});
+
+function hideSplash() {
+$.mobile.changePage("#one", "fade");
+} </script>
+<div data-role="page" data-theme="b" id="splash" style="background-color: #fff;">
+<div class="splash"><img src="images/yz-logo.png" alt="splash" />
+</div></div>
+<!-- Start of first page: #one -------------------------------------------------------------->
+<div data-role="page" id="one">
+<div data-role="header">
+		<h1 class='ff'>YZ-Lines</h1>
+		</div><!-- /header -->
+		<div data-role="content" >
+		<h2 class='ff'>Click to select image</h2>
+<img id='im1' src='http://www.booklife.co.za/makim/appimthumb.php?file=sea1.jpg' onclick='srfunct(this.src);' width='100'/><br />
+<img id='im2' src='http://www.booklife.co.za/makim/appimthumb.php?file=sea2.jpg' onclick='srfunct(this.src);' width='100'/><br />
+<img id='im3' src='http://www.booklife.co.za/makim/appimthumb.php?file=sea3.jpg' onclick='srfunct(this.src);' width='100'/><br />
+<img id='im4' src='http://www.booklife.co.za/makim/appimthumb.php?file=sea4.jpg' onclick='srfunct(this.src);' width='100'/><div id='ri'><div class="scro" id="ss">
+<script>
+var mm = xcd.split('|');
+var dw = parseInt(mm.length);
+var fs = parseInt(4);
+var vf = dw / fs;
+for (i=0;i<vf;i++) { 
+var gx = parseInt(i) * parseInt(4);
+var gt = parseInt(i) + parseInt(1);
+document.write("<button data-inline='true' value=\'"+gx+"\' width='120px' onclick=\'addfour(this.value);\'>.</button>"); } 
+</script></div></div>
+<script>
+function xv() { 
+var dzn = document.ca.mm.value;
+
+var tw = document.ca.bb.value;
+var ffx = tw.split(" ");
+var vc = ffx.join("_");
+
+
+var tw1 = document.ca.cc.value;
+var ffx1 = tw1.split(" ");
+var vc1 = ffx1.join("_");
+
+
+var tw2 = document.ca.ee.value;
+var ffx2 = tw2.split(" ");
+var vc2 = ffx2.join("_");
+
+
+var tw3 = document.ca.kk.value;
+var ffx3 = tw3.split(" ");
+var vc3 = ffx3.join("_");
+
+
+
+var sz = document.ca.size.value;
+var bgn = document.ca.ef.value;
+
+
+var newb = bgn.split(', ');
+var nnwb = newb[0]+"_"+newb[1]+"_"+newb[2];
+
+var fontbn = document.ca.nn.value;
+var ty =  document.ph.roe.value;
+var xs =  document.ph1.rx.value;
+var ys =  document.ph2.ry.value;
+var picfil = document.ca.picfil.value;
+document.getElementById("tt").innerHTML =nnwb+ty+xs+ys+picfil;
+AppMobi.device.launchExternal("http://www.booklife.co.za/makim/imds.php?file="+dzn+"&font="+fontbn+"&te="+vc+"&te1="+vc1+"&te2="+vc2+"&te3="+vc3+"&bg="+nnwb+"&size="+sz+"&rh="+ty+"&rrx="+xs+"&rry="+ys+"&fil="+picfil+"&siz=30"); } </script>
+<p><button data-role="button" data-inline="true" class='ff' id='co' onclick='xv();'>Save to Camera Roll</button><div id='tt'></div></p>		
+		
+		</div><!-- /content -->
+	
+	<div data-role="footer" data-theme="a"><div id="ss">
+<a href="#one" data-role="button" data-inline='true'><img src='images/homei.png' data-transition="flip" /></a>
+<a href="#two" data-role="button" data-inline="true" ><img src='images/make.png' data-transition="flip" /></a><a href="#three" data-role="button" data-inline="true" data-transition="flip"><img src='images/timeline.png' /></a>
+<a href="#four" data-role="button" data-inline="true" ><img src='images/camera.png' data-transition="flip"/></a><a href="#five" data-role="button" data-inline="true"data-transition="flip"><img src='images/abc.png' /></a><br /><a href="#six" data-role="button" data-inline="true"data-transition="flip"><img src='images/quote.png' /></a><a href="#seven" data-role="button" data-inline="true"data-transition="flip"><img src='images/filters.png' /></a><a href="#popup" data-role="button" data-inline="true"><img src='images/info.png'/></a></div>
+	</div><!-- /footer -->
+</div><!-- /page one -->
+
+
+<!-- Start of second page: #two ------------------------------------------------------------->
+<div data-role="page" id="two" data-theme="b">
+
+	<div data-role="header">
+		<h1 class='ff'>YZ_Lines</h1>
+		</div><!-- /header -->
+		<div data-role="content" >
+		
+<style>
+#cog{position:absolute;left:0px;
+top: 60px;}
+</style>
+<div id='scrollMe'><button data-role="button" data-inline="true" id='co' onclick='co();'><img src='images/color.png' /></button>
+<button data-role="button" data-inline="true" id='cosi' onclick='cosi();'>Size</button>
+<button data-role="button" data-inline="true" id='coro' onclick='coro();'>Rotate text</button><br /><button data-role="button" data-inline="true" id='cox' onclick='cox();'>
+Move right</button>
+<button data-role="button" data-inline="true" id='coy' onclick='coy();'>Space/Down</button><br /><button data-role="button" data-inline="true" id='coot' onclick='coot();'>Own Text(no copy paste)</button></div>
+
+
+<div id='fg1'>
+<div id='fg2'><i style='background-color:#00FFFF;width:60px;color:#00FFFF;padding:5px;' id='238, 233, 233' onclick='pp(this.id);'>x</i></div>
+<div id='fg2'><i style='background-color:#000000;width:60px;color:#000000;padding:5px;' id='238, 233, 233' onclick='pp(this.id);'>x</i></div>
+<div id='fg2'><i style='background-color:#0000FF;width:60px;color:#0000FF;padding:5px;' id='238, 233, 233' onclick='pp(this.id);'>x</i></div>
+<div id='fg2'><i style='background-color:#FF00FF;width:60px;color:#FF00FF;padding:5px;' id='238, 233, 233' onclick='pp(this.id);'>x</i></div>
+<div id='fg2'><i style='background-color:        #B0171F
+;width:60px;color:        #B0171F
+;padding:5px;' id='176, 23, 31' onclick='pp(this.id);'>x</i></div><div id='fg2'><i style='background-color:        #FFAEB9
+;width:60px;color:        #FFAEB9
+;padding:5px;' id='255, 174, 185' onclick='pp(this.id);'>x</i></div><div id='fg2'><i style='background-color:        #8B5F65
+;width:60px;color:        #8B5F65
+;padding:5px;' id='139, 95, 101' onclick='pp(this.id);'>x</i></div><div id='fg2'><i style='background-color:        #FFC0CB
+;width:60px;color:        #FFC0CB
+;padding:5px;' id='255, 192, 203' onclick='pp(this.id);'>x</i></div>
+<div id='fg2'><i style='background-color:        #EE3A8C
+;width:60px;color:        #EE3A8C
+;padding:5px;' id='238, 58, 140' onclick='pp(this.id);'>x</i></div><div id='fg2'><i style='background-color:        #CD3278
+;width:60px;color:        #CD3278
+;padding:5px;' id='205, 50, 120' onclick='pp(this.id);'>x</i></div><div id='fg2'><i style='background-color:        #8B2252
+;width:60px;color:        #8B2252
+;padding:5px;' id='139, 34, 82' onclick='pp(this.id);'>x</i></div>
+<div id='fg2'><i style='background-color:        #EE82EE
+;width:60px;color:        #EE82EE
+;padding:5px;' id='238, 130, 238' onclick='pp(this.id);'>x</i></div><div id='fg2'><i style='background-color:        #FF00FF
+;width:60px;color:        #FF00FF
+;padding:5px;' id='255, 0, 255' onclick='pp(this.id);'>x</i></div><div id='fg2'><i style='background-color:        #EE00EE
+;width:60px;color:        #EE00EE
+;padding:5px;' id='238, 0, 238' onclick='pp(this.id);'>x</i></div><div id='fg2'><i style='background-color:        #CD00CD
+;width:60px;color:        #CD00CD
+;padding:5px;' id='205, 0, 205' onclick='pp(this.id);'>x</i></div><div id='fg2'><i style='background-color:        #8B008B
+;width:60px;color:        #8B008B
+;padding:5px;' id='139, 0, 139' onclick='pp(this.id);'>x</i></div><div id='fg2'><i style='background-color:        #800080
+;width:60px;color:        #800080
+;padding:5px;' id='128, 0, 128' onclick='pp(this.id);'>x</i></div><div id='fg2'><i style='background-color:        #BA55D3
+;width:60px;color:        #BA55D3
+;padding:5px;' id='186, 85, 211' onclick='pp(this.id);'>x</i></div><div id='fg2'><i style='background-color:        #E066FF
+;width:60px;color:        #E066FF
+;padding:5px;' id='224, 102, 255' onclick='pp(this.id);'>x</i></div><div id='fg2'><i style='background-color:        #D15FEE
+;width:60px;color:        #D15FEE
+;padding:5px;' id='209, 95, 238' onclick='pp(this.id);'>x</i></div><div id='fg2'><i style='background-color:        #87CEFF
+;width:60px;color:        #87CEFF
+;padding:5px;' id='135, 206, 255' onclick='pp(this.id);'>x</i></div><div id='fg2'><i style='background-color:        #7EC0EE
+;width:60px;color:        #7EC0EE
+;padding:5px;' id='126, 192, 238' onclick='pp(this.id);'>x</i></div><div id='fg2'><i style='background-color:        #6CA6CD
+;width:60px;color:        #6CA6CD
+;padding:5px;' id='108, 166, 205' onclick='pp(this.id);'>x</i></div><div id='fg2'><i style='background-color:        #00F5FF
+;width:60px;color:        #00F5FF
+;padding:5px;' id='0, 245, 255' onclick='pp(this.id);'>x</i></div><div id='fg2'><i style='background-color:        #00E5EE
+;width:60px;color:        #00E5EE
+;padding:5px;' id='0, 229, 238' onclick='pp(this.id);'>x</i></div><div id='fg2'><i style='background-color:        #00C5CD
+;width:60px;color:        #00C5CD
+;padding:5px;' id='0, 197, 205' onclick='pp(this.id);'>x</i></div><div id='fg2'><i style='background-color:        #00868B
+;width:60px;color:        #00868B
+;padding:5px;' id='0, 134, 139' onclick='pp(this.id);'>x</i></div><div id='fg2'><i style='background-color:        #5F9EA0
+;width:60px;color:        #5F9EA0
+;padding:5px;' id='95, 158, 160' onclick='pp(this.id);'>x</i></div><div id='fg2'><i style='background-color:        #00CED1
+;width:60px;color:        #00CED1
+;padding:5px;' id='0, 206, 209' onclick='pp(this.id);'>x</i></div><div id='fg2'><i style='background-color:        #F0FFFF
+;width:60px;color:        #F0FFFF
+;padding:5px;' id='240, 255, 255' onclick='pp(this.id);'>x</i></div><div id='fg2'><i style='background-color:        #E0EEEE
+;width:60px;color:        #E0EEEE
+;padding:5px;' id='224, 238, 238' onclick='pp(this.id);'>x</i></div><div id='fg2'><i style='background-color:        #C1CDCD
+;width:60px;color:        #C1CDCD
+;padding:5px;' id='193, 205, 205' onclick='pp(this.id);'>x</i></div><div id='fg2'><i style='background-color:        #838B8B
+;width:60px;color:        #838B8B
+;padding:5px;' id='131, 139, 139' onclick='pp(this.id);'>x</i></div><div id='fg2'><i style='background-color:        #008B8B
+;width:60px;color:        #008B8B
+;padding:5px;' id='0, 139, 139' onclick='pp(this.id);'>x</i></div><div id='fg2'><i style='background-color:        #008080
+;width:60px;color:        #008080
+;padding:5px;' id='0, 128, 128' onclick='pp(this.id);'>x</i></div><div id='fg2'><i style='background-color:        #48D1CC
+;width:60px;color:        #48D1CC
+;padding:5px;' id='72, 209, 204' onclick='pp(this.id);'>x</i></div><div id='fg2'><i style='background-color:        #20B2AA
+;width:60px;color:        #20B2AA
+;padding:5px;' id='32, 178, 170' onclick='pp(this.id);'>x</i></div><div id='fg2'><i style='background-color:        #03A89E
+;width:60px;color:        #03A89E
+;padding:5px;' id='3, 168, 158' onclick='pp(this.id);'>x</i></div><div id='fg2'><i style='background-color:        #40E0D0
+;width:60px;color:        #40E0D0
+;padding:5px;' id='64, 224, 208' onclick='pp(this.id);'>x</i></div><div id='fg2'><i style='background-color:        #808A87
+;width:60px;color:        #808A87
+;padding:5px;' id='128, 138, 135' onclick='pp(this.id);'>x</i></div><div id='fg2'><i style='background-color:        #00C78C
+;width:60px;color:        #00C78C
+;padding:5px;' id='0, 199, 140' onclick='pp(this.id);'>x</i></div><div id='fg2'><i style='background-color:        #7FFFD4
+;width:60px;color:        #7FFFD4
+;padding:5px;' id='127, 255, 212' onclick='pp(this.id);'>x</i></div><div id='fg2'><i style='background-color:        #76EEC6
+;width:60px;color:        #76EEC6
+;padding:5px;' id='118, 238, 198' onclick='pp(this.id);'>x</i></div><div id='fg2'><i style='background-color:        #66CDAA
+;width:60px;color:        #66CDAA
+;padding:5px;' id='102, 205, 170' onclick='pp(this.id);'>x</i></div><div id='fg2'><i style='background-color:        #458B74
+;width:60px;color:        #458B74
+;padding:5px;' id='69, 139, 116' onclick='pp(this.id);'>x</i></div><div id='fg2'><i style='background-color:        #00FA9A
+;width:60px;color:        #00FA9A
+;padding:5px;' id='0, 250, 154' onclick='pp(this.id);'>x</i></div><div id='fg2'><i style='background-color:        #F5FFFA
+;width:60px;color:        #F5FFFA
+;padding:5px;' id='245, 255, 250' onclick='pp(this.id);'>x</i></div><div id='fg2'><i style='background-color:        #00FF7F
+;width:60px;color:        #00FF7F
+;padding:5px;' id='0, 255, 127' onclick='pp(this.id);'>x</i></div><div id='fg2'><i style='background-color:        #00EE76
+;width:60px;color:        #00EE76
+;padding:5px;' id='0, 238, 118' onclick='pp(this.id);'>x</i></div><div id='fg2'><i style='background-color:        #00CD66
+;width:60px;color:        #00CD66
+;padding:5px;' id='0, 205, 102' onclick='pp(this.id);'>x</i></div><div id='fg2'><i style='background-color:        #008B45
+;width:60px;color:        #008B45
+;padding:5px;' id='0, 139, 69' onclick='pp(this.id);'>x</i></div><div id='fg2'><i style='background-color:        #EEB422
+;width:60px;color:        #EEB422
+;padding:5px;' id='238, 180, 34' onclick='pp(this.id);'>x</i></div><div id='fg2'><i style='background-color:        #CD9B1D
+;width:60px;color:        #CD9B1D;padding:5px;' id='205, 155, 29' onclick='pp(this.id);'>x</i></div><div id='fg2'><i style='background-color:        #8B6914;width:60px;color:        #8B6914;padding:5px;' id='139, 105, 20' onclick='pp(this.id);'>x</i></div><div id='fg2'><i style='background-color:        #B8860B;width:60px;color:        #B8860B;padding:5px;' id='184, 134, 11' onclick='pp(this.id);'>x</i></div><div id='fg2'><i style='background-color:        #FFB90F;width:60px;color:        #FFB90F;padding:5px;' id='255, 185, 15' onclick='pp(this.id);'>x</i></div><div id='fg2'><i style='background-color:        #EEAD0E;width:60px;color:        #EEAD0E;padding:5px;' id='238, 173, 14' onclick='pp(this.id);'>x</i></div><div id='fg2'><i style='background-color:        #8B4500;width:60px;color:        #8B4500;padding:5px;' id='139, 69, 0' onclick='pp(this.id);'>x</i></div><div id='fg2'><i style='background-color:        #FF8000;width:60px;color:        #FF8000;padding:5px;' id='255, 128, 0' onclick='pp(this.id);'>x</i></div><div id='fg2'><i style='background-color:        #FFA54F;width:60px;color:        #FFA54F;padding:5px;' id='255, 165, 79' onclick='pp(this.id);'>x</i></div><div id='fg2'><i style='background-color:        #EE6A50;width:60px;color:        #EE6A50;padding:5px;' id='238, 106, 80' onclick='pp(this.id);'>x</i></div><div id='fg2'><i style='background-color:        #CD5B45;width:60px;color:        #CD5B45;padding:5px;' id='205, 91, 69' onclick='pp(this.id);'>x</i></div><div id='fg2'><i style='background-color:        #8B3E2F;width:60px;color:        #8B3E2F;padding:5px;' id='139, 62, 47' onclick='pp(this.id);'>x</i></div><div id='fg2'><i style='background-color:        #8A3324;width:60px;color:        #8A3324;padding:5px;' id='138, 51, 36' onclick='pp(this.id);'>x</i></div><div id='fg2'><i style='background-color:        #FF6347;width:60px;color:        #FF6347;padding:5px;' id='255, 99, 71' onclick='pp(this.id);'>x</i></div><div id='fg2'><i style='background-color:        #EE5C42;width:60px;color:        #EE5C42;padding:5px;' id='238, 92, 66' onclick='pp(this.id);'>x</i></div><div id='fg2'><i style='background-color:        #CD4F39;width:60px;color:        #CD4F39;padding:5px;' id='205, 79, 57' onclick='pp(this.id);'>x</i></div><div id='fg2'><i style='background-color:        #8B3626;width:60px;color:        #8B3626;padding:5px;' id='139, 54, 38' onclick='pp(this.id);'>x</i></div><div id='fg2'><i style='background-color:        #FA8072;width:60px;color:        #FA8072;padding:5px;' id='250, 128, 114' onclick='pp(this.id);'>x</i></div><div id='fg2'><i style='background-color:        #FFE4E1;width:60px;color:        #FFE4E1;padding:5px;' id='255, 228, 225' onclick='pp(this.id);'>x</i></div><div id='fg2'><i style='background-color:        #EED5D2;width:60px;color:        #EED5D2;padding:5px;' id='238, 213, 210' onclick='pp(this.id);'>x</i></div><div id='fg2'><i style='background-color:        #CDB7B5;width:60px;color:        #CDB7B5;padding:5px;' id='205, 183, 181' onclick='pp(this.id);'>x</i></div><div id='fg2'><i style='background-color:        #8B7D7B;width:60px;color:        #8B7D7B;padding:5px;' id='139, 125, 123' onclick='pp(this.id);'>x</i></div><div id='fg2'><i style='background-color:        #FFFAFA;width:60px;color:        #FFFAFA;padding:5px;' id='255, 250, 250' onclick='pp(this.id);'>x</i></div><div id='fg2'><i style='background-color:        #EEE9E9;width:60px;color:        #EEE9E9;padding:5px;' id='238, 233, 233' onclick='pp(this.id);'>x</i></div><div id='fg2'><i style='background-color:        #00008B;width:60px;color:        #00008B;padding:5px;' id='238, 233, 233' onclick='pp(this.id);'>x</i></div></div>
+<img src='images/res.png' width='200' onclick='changesr();' id='hh' />
+<div id='ri10a'><table><tr><td><form name='ca'>
+<input type='hidden' id='mm' value='' /><br />
+<input type='hidden' id='nn' value=' ' /><br /><label for="size">size</label>
+<span>
+<select name='size' id="size" class='jq-ui-forms'>
+
+<option value='10'>1</option>
+<option value='15'>2</option>
+
+<option value='20'>3</option>
+
+<option value='25'>4</option>
+<option value='30'>5</option>
+
+<option value='40'>6</option>
+
+<option value='50'>7</option>
+
+<option value='60'>8</option>
+
+<option value='70'>9</option>
+
+<option value='80'>10</option>
+
+<option value='90'>11</option>
+
+<option value='100'>12</option>
+<option value='125'>13</option>
+<option value='150'>14</option>
+
+<option value='175'>15</option>
+<option value='200'>16</option>
+<option value='220'>17</option>
+<option value='240'>18</option>
+</select>
+</span></td>
+
+</td><td>
+
+
+<input type='hidden' data-inline='true' name='bb' value=''/>
+</td><td><input type='hidden' data-inline='true' name='cc'  value=' '/></td><td><input type='hidden' data-inline='true' name='ee'  value=' '/></td><td><input type='hidden' name='ef'  value=' '/><input type='hidden' id='kk' value=' '/><input type='text' name='picfil' id='picfil' value=' ' /></form></td></tr/></table></div><div id='ri10b'><form name='ph'>
+<span><label for="roe">Rotate</label>
+<select name='roe' id="roe">
+
+<option value='0'>0</option>
+<option value='20'>20</option>
+<option value='30'>30</option>
+
+<option value='40'>40</option>
+
+<option value='60'>60</option>
+<option value='80'>80</option>
+
+<option value='100'>100</option>
+<option value='120'>120</option>
+<option value='140'>140</option>
+<option value='160'>160</option>
+<option value='180'>180</option>
+<option value='200'>200</option>
+<option value='220'>220</option>
+<option value='240'>240</option>
+<option value='260'>260</option>
+<option value='280'>280</option>
+<option value='300'>300</option>
+<option value='320'>320</option></select>
+</span></form></div><div id='ri10c'>
+<form name='ph1'>
+<span><label for="rx">From Left</label>
+<select name='rx' id="rx">
+
+<option value='0'>0</option>
+<option value='50'>50</option>
+<option value='100'>100</option>
+
+<option value='150'>150</option>
+
+<option value='200'>200</option>
+<option value='250'>250</option>
+</select>
+</span></form></div><div id='ri10d'>
+<form name='ph2'>
+<span><label for="ry">Space between</label>
+<select name='ry' id="rt">
+
+<option value='0'>0</option>
+<option value='less25'>-25</option>
+<option value='less50'>-50</option>
+<option value='less75'>-75</option>
+<option value='less100'>-100</option>
+<option value='less150'>-150</option>
+<option value='less200'>-200</option>
+<option value='less250'>-250</option>
+<option value='less300'>-300</option>
+<option value='50'>50</option>
+<option value='100'>100</option>
+
+<option value='150'>150</option>
+
+<option value='200'>200</option>
+<option value='250'>250</option>
+<option value='300'>300</option>
+
+
+<option value='350'>350</option>
+<option value='400'>400</option>
+
+
+<option value='500'>500</option>
+<option value='600'>600</option>
+<option value='700'>700</option>
+<option value='800'>800</option></select>
+</span></form></div>
+<div id='ri10e'><form name='kl'><span><textarea rows='5' cols='5' id='ow' name='ow'></textarea></form></span><button data-inline='true' onclick='at()'>Add Text</button></div><div id='ppxc'></div>
+
+
+		</div><!-- /content -->
+	
+	<div data-role="footer"><div class="scrollable" id="ss">
+<a href="#one" data-role="button" data-inline='true'><img src='images/homei.png' data-transition="flip" /></a>
+<a href="#two" data-role="button" data-inline="true" ><img src='images/make.png' data-transition="flip" /></a><a href="#three" data-role="button" data-inline="true" data-transition="flip"><img src='images/timeline.png' /></a>
+<a href="#four" data-role="button" data-inline="true" ><img src='images/camera.png' data-transition="flip"/></a><a href="#five" data-role="button" data-inline="true"data-transition="flip"><img src='images/abc.png' /></a><a href="#six" data-role="button" data-inline="true"data-transition="flip"><img src='images/quote.png' /></a><a href="#seven" data-role="button" data-inline="true"data-transition="flip"><img src='images/filters.png' /></a><a href="#popup" data-role="button" data-inline="true"><img src='images/info.png'/></a></div>
+
+
+	</div><!-- /footer -->
+</div><!-- /page two -->
+
+
+
+
+
+<!-- Start of second page: #three ------------------------------------------------------------->
+<div data-role="page" id="three" data-theme="a">
+
+	<div data-role="header">
+		<h1 class='ff'>YZ_Lines</h1>
+		</div><!-- /header -->
+		<div data-role="content" >
+		<h2 class='ff'>Click to select </h2>
+<img id='im1' src='http://www.booklife.co.za/makim/im.php?file=patt8.jpg&font=Squealer.ttf&size=45&bg=0, 0, 139&te=Bullshit&te1=Baffles&te2=Brains&te3=' onclick='cc(this.src);' width='100'/><br />
+<img id='im2' src='http://www.booklife.co.za/makim/im.php?file=patt10.jpg&font=anklepants.otf&size=30&bg=255, 0, 0&te=Da trouble wit &te1=computers is, &te2=dey got no sense&te3=of humour' onclick='cc(this.src);' width='100'/><br />
+<img id='im3' src='http://www.booklife.co.za/makim/im.php?file=wood1.jpg&font=1stcav.ttf&size=30&bg=110, 139, 61&te=Blessed are the &te1=Young, &te2=hey shall inherit &te3=the NATIONAL DEBT' onclick='cc(this.src);' width='100'/><br />
+<br /><div id='ri'><div class="scro" id='ss'>
+<script>
+var bh = ca.split('|');
+var dh = parseInt(bh.length);
+for (i=0;i<dh;i++) { 
+document.write("<button data-inline='true' value=\'"+bh[i]+"\'  onclick=\'addcate(this.value);\'>"+bh[i]+"</button>"); } 
+</script></div></div>
+		
+		
+
+		</div><!-- /content -->
+	
+	<div data-role="footer"><div id="ss">
+<a href="#one" data-role="button" data-inline='true'><img src='images/homei.png' data-transition="flip" /></a>
+<a href="#two" data-role="button" data-inline="true" ><img src='images/make.png' data-transition="flip" /></a><a href="#three" data-role="button" data-inline="true" data-transition="flip"><img src='images/timeline.png' /></a>
+<a href="#four" data-role="button" data-inline="true" ><img src='images/camera.png' data-transition="flip"/></a><a href="#five" data-role="button" data-inline="true"data-transition="flip"><img src='images/abc.png' /></a><a href="#six" data-role="button" data-inline="true"data-transition="flip"><img src='images/quote.png' /></a><a href="#seven" data-role="button" data-inline="true"data-transition="flip"><img src='images/filters.png' /></a><a href="#popup" data-role="button" data-inline="true"><img src='images/info.png'/></a></div>
+
+	</
+	div><!-- /footer -->
+</div><!-- /page three -->
+
+
+
+
+<!-- Start of second page: #four ------------------------------------------------------------->
+<div data-role="page" id="four" data-theme="a">
+
+	<div data-role="header">
+		<h1 class='ff'>YZ_Lines</h1>
+		</div><!-- /header -->
+		<div data-role="content" >
+		<h2 class='ff'>Click on image once uploaded to use.</h2>
+		
+<img style="display:none;position:absolute;left:0px;top:200px;width:132px;height:146px;" onclick='srfunct(this.src);' id="pic" src="" /><div id='uploadstat'></div><div id='res'>result</div>
+<button id="btnC1" type="button" style="font-size:30px;" data-inline="true" onclick="shoot();"> Shoot </button>
+<button id="btnC2" type="button" style="font-size:30px;" data-inline="true"onclick="importPic();"> Import </button>
+<button id="btnC6" type="button" data-inline='true' style="font-size:30px;" onclick="uploadPicture();"> Upload Last Pic </button>
+<p>
+<a href="#one" data-role="button" data-inline="true" ><img src='images/homei.png' data-transition="flip" /></a>
+<a href="#two" data-role="button" data-inline="true" ><img src='images/make.png' data-transition="flip" /></a><a href="#three" data-role="button" data-inline="true" data-transition="flip"><img src='images/timeline.png' /></a>
+<a href="#four" data-role="button" data-inline="true" ><img src='images/camera.png' data-transition="flip"/></a><a href="#five" data-role="button" data-inline="true"data-transition="flip"><img src='images/abc.png' /></a><a href="#six" data-role="button" data-inline="true"data-transition="flip"><img src='images/quote.png' /></a>
+<a href="#popup" data-role="button" data-inline="true"><img src='images/info.png' /></a><a href="#one" data-role="button" data-inline='true' data-icon="home"></a></p><div id='pyt'></div>
+</div>
+		</div><!-- /content -->
+	
+	<div data-role="footer">
+<div class="scrollable" id="ss">
+<a href="#one" data-role="button" data-inline="true" ><img src='images/homei.png' data-transition="flip" /></a>
+<a href="#two" data-role="button" data-inline="true" ><img src='images/make.png' data-transition="flip" /></a><a href="#three" data-role="button" data-inline="true" data-transition="flip"><img src='images/timeline.png' /></a>
+<a href="#four" data-role="button" data-inline="true" ><img src='images/camera.png' data-transition="flip"/></a><a href="#five" data-role="button" data-inline="true"data-transition="flip"><img src='images/abc.png' /></a><a href="#six" data-role="button" data-inline="true"data-transition="flip"><img src='images/quote.png' /></a><a href="#seven" data-role="button" data-inline="true"data-transition="flip"><img src='images/filters.png' /></a><a href="#popup" data-role="button" data-inline="true"><img src='images/info.png'/></a></div>
+
+	</div><!-- /footer -->
+</div><!-- /page four -->
+
+
+
+
+
+
+
+
+
+<!-- Start of second page: #five ------------------------------------------------------------->
+<div data-role="page" id="five" data-theme="a">
+
+	<div data-role="header">
+		<h1 class='ff'>YZ_Lines</h1>
+		</div><!-- /header -->
+		<div data-role="content" >
+		<h2 class='ff'>Click to select font</h2>
+<p><a href="#one" data-role="button" data-inline="true" ><img src='images/homei.png' data-transition="flip" /></a>
+<a href="#two" data-role="button" data-inline="true" ><img src='images/make.png' data-transition="flip" /></a><a href="#three" data-role="button" data-inline="true" data-transition="flip"><img src='images/timeline.png' /></a>
+<a href="#four" data-role="button" data-inline="true" ><img src='images/camera.png' data-transition="flip"/></a><a href="#five" data-role="button" data-inline="true"data-transition="flip"><img src='images/abc.png' /></a><a href="#six" data-role="button" data-inline="true"data-transition="flip"><img src='images/quote.png' /></a><a href="#seven" data-role="button" data-inline="true"data-transition="flip"><img src='images/filters.png' /></a><a href="#popup" data-role="button" data-inline="true"><img src='images/info.png'/></a></p>
+		<img id='im1t' src='http://www.booklife.co.za/makim/ss.php?font=pretendo.ttf' onclick='srfont(this.src);' width='150' height='50' /><br />
+<img id='im2t' src='http://www.booklife.co.za/makim/ss.php?font=METALORD.TTF' onclick='srfont(this.src);' width='150' height='60'/><br />
+<img id='im3t' src='http://www.booklife.co.za/makim/ss.php?font=learningcurvedashed_ot.otf' onclick='srfont(this.src);' width='150' height='50'/><br />
+<img id='im4t' src='http://www.booklife.co.za/makim/ss.php?font=tapem__.ttf' onclick='srfont(this.src);' width='150' height='60'/><br />
+<img id='im5t' src='http://www.booklife.co.za/makim/ss.php?font=911v2.ttf' onclick='srfont(this.src);' width='150' height='50'/><br />
+<img id='im6t' src='http://www.booklife.co.za/makim/ss.php?font=print_clearly_ot.otf'onclick='srfont(this.src);' width='150' height='60'/><br />
+<img id='im7t' src='http://www.booklife.co.za/makim/ss.php?font=pretendo.ttf' onclick='srfont(this.src);' width='150' height='50'/><br />
+<img id='im8t' src='http://www.booklife.co.za/makim/ss.php?font=pretendo.ttf' onclick='srfont(this.src);' width='150' height='50'/><br />
+<img id='im9t' src='http://www.booklife.co.za/makim/ss.php?font=pretendo.ttf' onclick='srfont(this.src);' width='150' height='50'/><br /><br /><div id='ri2'><div>
+<script>
+var mmt = ft.split(',');
+var dwt = parseInt(mmt.length);
+var fst = parseInt(10);
+var vft = dwt / fst;
+for (i=0;i<vft;i++) { 
+var gxt = parseInt(i) * parseInt(10);
+var gtt = parseInt(i) + parseInt(1);
+document.write("<button data-inline='true' value=\'"+gxt+"\' width='800px' onclick=\'addten(this.value);\'>.</button>"); } 
+</script></div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		</div><!-- /content -->
+	
+	<div data-role="footer"><div id="ss">
+<a href="#one" data-role="button" data-inline="true" ><img src='images/homei.png' data-transition="flip" /></a>
+<a href="#two" data-role="button" data-inline="true" ><img src='images/make.png' data-transition="flip" /></a><a href="#three" data-role="button" data-inline="true" data-transition="flip"><img src='images/timeline.png' /></a>
+<a href="#four" data-role="button" data-inline="true" ><img src='images/camera.png' data-transition="flip"/></a><a href="#five" data-role="button" data-inline="true"data-transition="flip"><img src='images/abc.png' /></a><a href="#six" data-role="button" data-inline="true"data-transition="flip"><img src='images/quote.png' /></a><a href="#seven" data-role="button" data-inline="true"data-transition="flip"><img src='images/filters.png' /></a><a href="#popup" data-role="button" data-inline="true"><img src='images/info.png'/></a></div>
+
+
+	</div><!-- /footer -->
+</div><!-- /page five -->
+
+
+
+
+
+<!-- Start of second page: #six ------------------------------------------------------------->
+<div data-role="page" id="six" data-theme="a">
+
+	<div data-role="header">
+		<h1 class='ff'>YZ_Lines</h1>
+		</div><!-- /header -->
+		<div data-role="content" >
+		<h2 class='ff'>Click to select quote</h2>
+<script>
+var nn;
+function ftzz(nn) { 
+
+var bb = qxc.split('|');
+var fd = bb[nn].split('*');
+
+s = document.getElementById(nn).innerHTML;
+	
+s = s.replace(/(^\s*)|(\s*$)/gi,"");
+	
+s = s.replace(/[ ]{2,}/gi," ");
+	
+s = s.replace(/\n /,"\n");
+
+var num = s.split(' ').length;
+
+
+len = s.split(' ');
+
+var numoffields = parseInt(4);
+var numofwords = parseInt(num);
+var wordsp = numofwords/numoffields;
+wordsp = Math.ceil(parseInt(wordsp) );
+var wordsp2 = wordsp*2;
+var wordsp3 = wordsp*3;
+var slice1 = len.slice(0,wordsp);
+var slice2 = len.slice(wordsp,wordsp2);
+var slice3 = len.slice(wordsp2,wordsp3);
+var slice4 = len.slice(wordsp3,numofwords);
+document.ca.bb.value =slice1.join(' ');
+document.ca.cc.value =slice2.join(' ');
+document.ca.ee.value =slice3.join(' ');
+document.ca.kk.value =slice4.join(' ');  } var ll;
+function addfour2(ll) {  
+var fg = qxc.split('|');
+var len = qxc.length;
+
+var bb = fg[ll].split('*');
+var cv =bb[3];
+var gy = parseInt(ll)+parseInt(1);
+var gy1 = parseInt(ll)+parseInt(2);
+var gy2 = parseInt(ll)+parseInt(3);
+var gy3 = parseInt(ll)+parseInt(4);
+
+var gy4 = parseInt(ll)+parseInt(5);
+var gy5 = parseInt(ll)+parseInt(6);
+var gy6 = parseInt(ll)+parseInt(7);
+var gy7 = parseInt(ll)+parseInt(8);
+
+var gy8 = parseInt(ll)+parseInt(9);
+var gy9 = parseInt(ll)+parseInt(10);
+var gy10 = parseInt(ll)+parseInt(11);
+var gy11 = parseInt(ll)+parseInt(12);
+var cc = fg[gy].split('*');
+var gg = cc[3];
+var dd = fg[gy1].split('*');
+var gg1 = dd[3];
+var ee = fg[gy2].split('*');
+var gg2 = ee[3];
+var ff = fg[gy3].split('*');
+var gg3 = ff[3];
+var ff1 = fg[gy4].split('*');
+var gg4 = ff1[3];
+
+var ff2 = fg[gy5].split('*');
+var gg5 = ff2[3];
+
+
+var ff3 = fg[gy6].split('*');
+var gg6 = ff3[3];
+
+var ff4 = fg[gy7].split('*');
+var gg7 = ff4[3];
+var ff5 = fg[gy8].split('*');
+var gg8 = ff5[3];
+
+var ff6 = fg[gy9].split('*');
+var gg9 = ff6[3];
+var ff7 = fg[gy10].split('*');
+var gg10 = ff7[3];
+var ff8 = fg[gy11].split('*');
+var gg11 = ff8[3];
+document.getElementById("0").innerHTML = gg;
+document.getElementById("1").innerHTML= gg1;
+document.getElementById("2").innerHTML = gg2;
+document.getElementById("3").innerHTML = gg3;
+
+document.getElementById("4").innerHTML = gg4;
+document.getElementById("5").innerHTML= gg5;
+document.getElementById("6").innerHTML = gg6;
+document.getElementById("7").innerHTML = gg7;
+
+document.getElementById("8").innerHTML = gg8;
+document.getElementById("9").innerHTML= gg9;
+document.getElementById("10").innerHTML = gg10;
+document.getElementById("11").innerHTML = gg11;
+document.getElementById("kl").innerHTML = ll;
+  
+} 
+
+</script>
+		
+<div id='0' class='pw' onclick='ftzz(this.id);'>A yacht is a hole in the water, lined with wood, steel, or fiberglass, through which one pours all his money</div>
+
+
+
+<div id='1' class='pw' onclick='ftzz(this.id);'>Da trouble wit computers is, dey got no sense of humor.</div>
+
+
+
+<div id='2' class='pw' onclick='ftzz(this.id);'>There is no feeling, except the extremes of fear and grief, that does not find relief in music.</div>
+
+
+
+<div id='3' class='pw' onclick='ftzz(this.id);'>Crisis management works beautifully until an actual crisis occurs.</div>
+<div id='4' class='pw' onclick='ftzz(this.id);'>Crime is merely politics without the excuses</div>
+<div id='5' class='pw' onclick='ftzz(this.id);'>Construct a system that even a fool can use and only a fool will want to use it.</div>
+<div id='6' class='pw' onclick='ftzz(this.id);'>Confidence is the feeling you had before you knew better.</div>
+<div id='7' class='pw' onclick='ftzz(this.id);'>Computers are unreliable, but humans are even more unreliable. Any system which depends upon human reliability is unreliable. You can rely on it.</div>
+<div id='8' class='pw' onclick='ftzz(this.id);'>Common sense is instinct. Enough of it is genius.</div>
+<div id='9' class='pw' onclick='ftzz(this.id);'>Civil servants are neither civil nor servile.</div>
+<div id='10' class='pw' onclick='ftzz(this.id);'>Children are a comfort in your old age, and they will even help you reach it.</div>
+<div id='11' class='pw' onclick='ftzz(this.id);'>Cheer up. The first hundred years are the hardest</div><div id='kl'></div>
+<div class='scrollable' id='ss'>
+<script>
+var mmw1 = qxc.split('|');
+var dww1 = parseInt(mmw1.length);
+var fsw1 = parseInt(12);
+var vfw1 = dw / fs;
+for (i=0;i<vfw1;i++) { 
+var gxw1 = parseInt(i) * parseInt(12);
+document.write("<button data-inline='true' id=\'"+gxw1+"\' onclick=\'addfour2(this.id);\'>.</button>"); } 
+</script></div>
+
+		</div><!-- /content -->
+	
+	<div data-role="footer"><div class="scrollable" id="ss">
+<a href="#one" data-role="button" data-inline='true'><img src='images/homei.png' data-transition="flip" /></a>
+<a href="#two" data-role="button" data-inline="true" ><img src='images/make.png' data-transition="flip" /></a><a href="#three" data-role="button" data-inline="true" data-transition="flip"><img src='images/timeline.png' /></a>
+<a href="#four" data-role="button" data-inline="true" ><img src='images/camera.png' data-transition="flip"/></a><a href="#five" data-role="button" data-inline="true"data-transition="flip"><img src='images/abc.png' /></a><a href="#six" data-role="button" data-inline="true"data-transition="flip"><img src='images/quote.png' /></a><a href="#seven" data-role="button" data-inline="true"data-transition="flip"><img src='images/filters.png' /></a><a href="#popup" data-role="button" data-inline="true"><img src='images/info.png'/></a></div>
+
+	</div><!-- /footer -->
+</div><!-- /page six -->
+
+
+
+<!-- Start of second page: #seven ------------------------------------------------------------->
+<div data-role="page" id="seven" data-theme="a">
+
+	<div data-role="header">
+		<h1 class='ff'>YZ_Lines</h1>
+		</div><!-- /header -->
+		<div data-role="content" >
+		<h2 class='ff'>Click to select a filter</h2>
+		<img src='images/op1.jpg' width='50px' id='one' onclick='picfil(this.id);'/>
+<img src='images/op2.jpg' width='50px' id='two' onclick='picfil(this.id);' />
+<img src='images/op3.jpg' width='50px' id='three' onclick='picfil(this.id);' />
+<img src='images/op4.jpg' width='50px' id='four' onclick='picfil(this.id);' />
+<img src='images/op5.png' width='50px' id='five' onclick='picfil(this.id);' />
+<img src='images/op6.png' width='50px' id='six' onclick='picfil(this.id);' />
+<img src='images/op7.png' width='50px' id='seven' onclick='picfil(this.id);' />
+
+		</div><!-- /content -->
+	
+	<div data-role="footer">
+<div class="scrollable" id="ss">
+<a href="#one" data-role="button" data-inline="true" ><img src='images/homei.png' data-transition="flip" /></a>
+<a href="#two" data-role="button" data-inline="true" ><img src='images/make.png' data-transition="flip" /></a><a href="#three" data-role="button" data-inline="true" data-transition="flip"><img src='images/timeline.png' /></a>
+<a href="#four" data-role="button" data-inline="true" ><img src='images/camera.png' data-transition="flip"/></a><a href="#five" data-role="button" data-inline="true"data-transition="flip"><img src='images/abc.png' /></a><a href="#six" data-role="button" data-inline="true"data-transition="flip"><img src='images/quote.png' /></a><a href="#seven" data-role="button" data-inline="true"data-transition="flip"><img src='images/filters.png' /></a><a href="#popup" data-role="button" data-inline="true"><img src='images/info.png'/></a></div>
+
+
+	</div><!-- /footer -->
+</div><!-- /page seven -->
+
+
+
+
+
+
+<!-- Start of info page: #popup ------------------------------------------------------------->
+<div data-role="page" id="popup">
+
+	<div data-role="header" data-theme="a">
+		<h1 class='ff'>How To</h1>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="a">
+<h2>How to Save and Make Images.</h2>
+<p><a href="#one" data-role="button" data-inline="true" ><img src='images/homei.png' data-transition="flip" /></a></p><ul>
+<li>The home page is denoted by the home icon. To save yor image to camera roll you must return to this page when done and select the save to camera roll button.</li>
+<li><img src='images/camera.png' /> Denotes the camera page, you may import from yor pictures, or that a pic in app. Using web found images that are not your own is frowned upon and activley discouraged in app, most will not work. We have tons of stunning images to choose from if you do not wish to use your own. The scroll bar next to the images on the home page can be use to call up loads of beautiful photos on click</li>
+<li>To select one of our images click on it then when you select the <img src='images/make.png' /> Page the progarame will use your selected image. To import yor own you must also click on the uploaded or imported image before the program will recognize your choice.</li><li><img src='images/filters.png' /> Page allows you to select a filter, you must select one if you wish to save to camera roll.</li>
+<li><img src='images/quote.png' /> Page allows you to scroll through our selection of quotations from celebrity sources. click on the one you want before returning to the <img src='images/make.png' Page.</li><li><img src='images/abc.png' /> Page allows you to select a font from our huge variety by clicking on the one you want.</li><li><img src='images/make.png' /> Page allows you to select a size for your text, enter your own if you prefer, set a colour and rotation for your text.</li><li>When done return to the home page and save to your photo roll. Click on your image and select save from the pop-up. Now you can share your masterpiece with any social network.</li></ul>
+					
+			
+	</div><!-- /content -->
+	
+	<div data-role="footer">
+	
+	</div><!-- /footer -->
+</div><!-- /page popup -->
+<script>
+
+
+var nn;
+var bb;
+var nnb;
+function srfunct(nn) { 
+
+var ds = nn;
+
+dz = ds.substring(52, ds.length);
+var ff = ds.lastIndexOf("/");
+var ffm = parseInt(ff+1);
+var tt = ds.substring(0, 15);
+if(tt == "http://www.book") { 
+dz = ds.substring(52, ds.length); } 
+else { dz = ds.substring(ffm, ds.length); } 
+document.ca.mm.value = dz;
+document.getElementById("ppxc").innerHTML = dz; }
+
+ 
+function changesr() { 
+
+
+
+var dz = document.ca.mm.value;
+
+
+var tej = document.ca.bb.value;
+var tej1 = document.ca.cc.value;
+var tej2 = document.ca.ee.value;
+var tej3 = document.ca.kk.value;
+var bg = document.ca.ef.value;
+var sz = document.ca.size.value;
+var ty =  document.ph.roe.value;
+var xs =  document.ph1.rx.value;
+var ys =  document.ph2.ry.value;
+var picfil = document.ca.picfil.value;
+var fontb = document.ca.nn.value;
+var xc = "http://booklife.co.za/makim/im.php?file="+dz+"&font="+fontb+"&rh="+ty+"&fil="+picfil+"&size="+sz+"&rrx="+xs+"&rry="+ys+"&bg="+bg+"&te="+tej+"&te1="+tej1+"&te2="+tej2+"&te3="+tej3;
+
+
+
+document.getElementById("ppxc").innerHTML = dz;
+
+document.getElementById("hh").src = xc;
+
+ }
+function picfil(hh) { 
+document.ca.picfil.value = hh; } 
+
+function srfont(nnb) { 
+
+var dsb = nnb;
+
+dzb = dsb.substring(44, dsb.length);
+
+
+
+document.ca.nn.value = dzb; }
+
+
+function at() { 
+s = document.kl.ow.value;
+	
+s = s.replace(/(^\s*)|(\s*$)/gi,"");
+	
+s = s.replace(/[ ]{2,}/gi," ");
+	
+s = s.replace(/\n /,"\n");
+
+var num = s.split(' ').length;
+
+
+len = s.split(' ');
+
+var numoffields = parseInt(4);
+var numofwords = parseInt(num);
+var wordsp = numofwords/numoffields;
+wordsp = Math.ceil(parseInt(wordsp) );
+var wordsp2 = wordsp*2;
+var wordsp3 = wordsp*3;
+var slice1 = len.slice(0,wordsp);
+var slice2 = len.slice(wordsp,wordsp2);
+var slice3 = len.slice(wordsp2,wordsp3);
+var slice4 = len.slice(wordsp3,numofwords);
+document.ca.bb.value =slice1.join(' ');
+document.ca.cc.value =slice2.join(' ');
+document.ca.ee.value =slice3.join(' ');
+document.ca.kk.value =slice4.join(' '); 
+} 
+
+function co() { 
+
+var gt = document.getElementById("fg1");
+
+gt.style.display = "block"; 
+var gt = document.getElementById("hh");
+
+gt.style.display = "block";
+var gt = document.getElementById("ri10b");
+gt.style.display = "none";
+var gt = document.getElementById("ri10a");
+gt.style.display = "none";
+var gt = document.getElementById("ri10c");
+gt.style.display = "none";
+var gt = document.getElementById("ri10e");
+gt.style.display = "none";
+var gtbv = document.getElementById("ri10a");
+gtbv.style.display = "none";} 
+
+
+function cosi() { 
+var gt = document.getElementById("ri10a");
+gt.style.display = "block"; 
+var gt = document.getElementById("ri10b");
+gt.style.display = "none";
+var gt = document.getElementById("ri10c");
+gt.style.display = "none";
+var gt = document.getElementById("ri10d");
+gt.style.display = "none";
+var gt = document.getElementById("ri10e");
+gt.style.display = "none";}
+
+
+function coro() { 
+var gt = document.getElementById("ri10b");
+gt.style.display = "block"; 
+var gt = document.getElementById("ri10a");
+gt.style.display = "none";
+var gt = document.getElementById("ri10c");
+gt.style.display = "none";
+var gt = document.getElementById("ri10d");
+gt.style.display = "none";
+var gt = document.getElementById("ri10e");
+gt.style.display = "none";}
+
+
+function coot() { 
+var gt = document.getElementById("ri10e");
+gt.style.display = "block"; 
+var gt = document.getElementById("ri10b");
+gt.style.display = "none";
+var gt = document.getElementById("ri10a");
+gt.style.display = "none";
+var gt = document.getElementById("ri10c");
+gt.style.display = "none";
+var gt = document.getElementById("ri10d");
+gt.style.display = "none";}
+
+function cox() { 
+var gt = document.getElementById("ri10c");
+gt.style.display = "block"; 
+var gt = document.getElementById("ri10a");
+gt.style.display = "none";
+var gt = document.getElementById("ri10d");
+gt.style.display = "none";
+var gt = document.getElementById("ri10e");
+gt.style.display = "none";
+var gt = document.getElementById("ri10b");
+gt.style.display = "none";
+}
+
+
+function coy() { 
+var gt = document.getElementById("ri10d");
+gt.style.display = "block"; 
+var gt = document.getElementById("ri10b");
+gt.style.display = "none";
+var gt = document.getElementById("ri10a");
+gt.style.display = "none";
+var gt = document.getElementById("ri10c");
+gt.style.display = "none";
+
+
+var gt = document.getElementById("ri10e");
+gt.style.display = "none";}
+
+function pp(bf) { 
+document.ca.ef.value = bf;
+var gt = document.getElementById("fg1");
+
+gt.style.display = "none"; 
+var gt = document.getElementById("hh");
+
+gt.style.display = "block";} 
+ 
+
+
+</script>
+
+
+
+</body>
+</html>
